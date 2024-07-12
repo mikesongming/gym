@@ -14,6 +14,15 @@ Gym also has a discord server for development purposes that you can join here: h
 
 ## Installation
 
+First, create a new virtual environment (optional but highly recommended) using your preferred tool.
+
+```
+conda create -n gym python=3.10
+conda activate gym
+pip install 'numpy<2'
+pip install 'opencv-python~=3.4'
+```
+
 To install the base Gym library, use `pip install gym`.
 
 This does not include dependencies for all families of environments (there's a massive number, and some can be problematic to install on certain systems). You can install these dependencies for one family like `pip install gym[atari]` or use `pip install gym[all]` to install all dependencies.
@@ -54,7 +63,7 @@ Gym keeps strict versioning for reproducibility reasons. All environments end in
 ## MuJoCo Environments
 
 The latest "\_v4" and future versions of the MuJoCo environments will no longer depend on `mujoco-py`. Instead `mujoco` will be the required dependency for future gym MuJoCo environment versions. Old gym MuJoCo environment versions that depend on `mujoco-py` will still be kept but unmaintained.
-To install the dependencies for the latest gym MuJoCo environments use `pip install gym[mujoco]`. Dependencies for old MuJoCo environments can still be installed by `pip install gym[mujoco_py]`. 
+To install the dependencies for the latest gym MuJoCo environments use `pip install gym[mujoco]`. Dependencies for old MuJoCo environments can still be installed by `pip install gym[mujoco_py]`.
 
 ## Citation
 
