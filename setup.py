@@ -17,10 +17,10 @@ extras = {
     "accept-rom-license": ["autorom[accept-rom-license]~=0.4.2"],
     "box2d": ["box2d-py==2.3.5", "pygame==2.1.0", "swig==4.*"],
     "classic_control": ["pygame==2.1.0"],
-    "mujoco_py": ["mujoco_py<2.2,>=2.1"],
+    "mujoco_py": ["cython<3","mujoco_py<2.2,>=2.1"],
     "mujoco": ["mujoco==2.2", "imageio>=2.14.1"],
     "toy_text": ["pygame==2.1.0"],
-    "other": ["lz4>=3.1.0", "opencv-python>=3.0", "matplotlib>=3.0", "moviepy>=1.0.0"],
+    "other": ["lz4>=3.1.0", "opencv-python~=3.4", "matplotlib>=3.0", "moviepy>=1.0.0"],
 }
 
 # Testing dependency groups.
@@ -62,7 +62,7 @@ setup(
     description="Gym: A universal API for reinforcement learning environments",
     extras_require=extras,
     install_requires=[
-        "numpy >= 1.18.0",
+        "numpy >= 1.18.0,<2",
         "cloudpickle >= 1.2.0",
         "importlib_metadata >= 4.8.0; python_version < '3.10'",
         "gym_notices >= 0.0.4",

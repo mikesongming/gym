@@ -89,7 +89,7 @@ def test_add_vector_episode_statistics():
             }
         }
         info = add_vector_episode_statistics(info, episode_info["episode"], NUM_ENVS, i)
-        assert np.alltrue(info["_episode"][: i + 1])
+        assert np.all(info["_episode"][: i + 1])
 
         for j in range(NUM_ENVS):
             if j <= i:

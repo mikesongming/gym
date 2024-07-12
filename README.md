@@ -14,11 +14,20 @@ Gym also has a discord server for development purposes that you can join here: h
 
 ## Installation
 
-To install the base Gym library, use `pip install gym`.
+First, create a new virtual environment (optional but highly recommended) using your preferred tool.
 
-This does not include dependencies for all families of environments (there's a massive number, and some can be problematic to install on certain systems). You can install these dependencies for one family like `pip install gym[atari]` or use `pip install gym[all]` to install all dependencies.
+```
+conda create -n gym python=3.10
+conda activate gym
+```
 
-We support Python 3.7, 3.8, 3.9 and 3.10 on Linux and macOS. We will accept PRs related to Windows, but do not officially support it.
+To install the base Gym library, use
+
+```
+python -m pip install 'git+https://github.com/mikesongming/gym.git#egg=gym[all]'
+```
+
+We support Python 3.10 on macOS.
 
 ## API
 
@@ -54,7 +63,7 @@ Gym keeps strict versioning for reproducibility reasons. All environments end in
 ## MuJoCo Environments
 
 The latest "\_v4" and future versions of the MuJoCo environments will no longer depend on `mujoco-py`. Instead `mujoco` will be the required dependency for future gym MuJoCo environment versions. Old gym MuJoCo environment versions that depend on `mujoco-py` will still be kept but unmaintained.
-To install the dependencies for the latest gym MuJoCo environments use `pip install gym[mujoco]`. Dependencies for old MuJoCo environments can still be installed by `pip install gym[mujoco_py]`. 
+To install the dependencies for the latest gym MuJoCo environments use `pip install gym[mujoco]`. Dependencies for old MuJoCo environments can still be installed by `pip install gym[mujoco_py]`.
 
 ## Citation
 

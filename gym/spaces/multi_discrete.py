@@ -125,7 +125,10 @@ class MultiDiscrete(Space[np.ndarray]):
     def contains(self, x) -> bool:
         """Return boolean specifying if x is a valid member of this space."""
         if isinstance(x, Sequence):
-            x = np.array(x)  # Promote list to array for contains check
+            try:
+                x = np.array(x)  # Promote list to array for contains check
+            except ValueError:
+                return False
 
         # if nvec is uint32 and space dtype is uint32, then 0 <= x < self.nvec guarantees that x
         # is within correct bounds for space dtype (even though x does not have to be unsigned)
