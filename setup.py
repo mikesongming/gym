@@ -17,7 +17,6 @@ extras = {
     "accept-rom-license": ["autorom[accept-rom-license]~=0.4.2"],
     "box2d": ["box2d-py==2.3.5", "pygame==2.1.0", "swig==4.*"],
     "classic_control": ["pygame==2.1.0"],
-    "mujoco_py": ["cython<3","mujoco_py<2.2,>=2.1"],
     "mujoco": ["mujoco==2.2", "imageio>=2.14.1"],
     "toy_text": ["pygame==2.1.0"],
     "other": ["lz4>=3.1.0", "opencv-python~=3.4", "matplotlib>=3.0", "moviepy>=1.0.0"],
