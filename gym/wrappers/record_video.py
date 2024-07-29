@@ -197,7 +197,7 @@ class RecordVideo(gym.Wrapper):
                 return recorded_frames + super().render(*args, **kwargs)
         else:
             if self.recording:
-                return self.video_recorder.last_frame
+                return self.video_recorder.recorded_frames[-1]
             else:
                 return super().render(*args, **kwargs)
 
